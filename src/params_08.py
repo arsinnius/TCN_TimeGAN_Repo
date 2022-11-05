@@ -5,7 +5,7 @@ from tensorflow.keras.optimizers import Adam
 experiment = 8
 
 ## Data Parameters
-data_file = 'Qtrly_PDSI_Dataset.csv'
+data_file = ''
 ts_names = ['BA', 'CAT', 'DIS', 'GE', 'IBM', 'KO']
 start_date = (2000,1,1)
 end_date = (2017,12,31)
@@ -16,6 +16,7 @@ seq_len = 180
 batch_size = 128
 train_steps = 10000
 gamma = 1
+rho = 0
 
 ##  Network Parameters
 hidden_dim = 4 * n_seq

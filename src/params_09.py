@@ -2,7 +2,7 @@ from tensorflow.keras.layers import AveragePooling1D, MaxPooling1D
 from tensorflow.keras.losses import BinaryCrossentropy, MeanSquaredError
 from tensorflow.keras.optimizers import Adam
 
-experiment = 2
+experiment = 9
 
 ## Data Parameters
 data_file = 'Qtrly_PDSI_Dataset.csv'
@@ -16,6 +16,7 @@ seq_len = 180
 batch_size = 128
 train_steps = 10000
 gamma = 1
+rho = 1
 
 ##  Network Parameters
 hidden_dim = 4 * n_seq
