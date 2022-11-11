@@ -16,7 +16,6 @@ seq_len = 180
 batch_size = 128
 train_steps = 10000
 gamma = 1
-rho = 0
 
 ##  Network Parameters
 hidden_dim = 4 * n_seq

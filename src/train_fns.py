@@ -44,8 +44,8 @@ def get_generator_moment_loss(y_true, y_pred):
 def get_roughness_loss(x,y):
   #
   t = (x - y).numpy()
-  ts_loss = np.sum(np.sum(np.diff(t, n=2, axis=0)**2, axis=0)/len(x), axis=0)
-  return sum(ts_loss)
+  ts_loss = np.sum(np.sum(np.diff(t, n=2, axis=1)**2, axis=1)/len(x), axis=0)
+  return np.max(ts_loss)
 
 @tf.function
 def train_generator(x, z):
@@ -125,4 +125,4 @@ def make_rnn(input_shape, n_layers, hidden_units, output_units, name):
                            name=f'GRUvy_{i + 1}') for i in range(n_layers)] +
                       [Dense(units=output_units,
                              activation='sigmoid',
-                             name='OUT')], name=name)                    
+                             name='OUT')], name=name) 
