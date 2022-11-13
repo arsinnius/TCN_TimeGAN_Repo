@@ -41,11 +41,6 @@ The `src` folder contains the files necessary to run the experiments.
 <figcaption></figcaption>
 
 Notice that `experiment_08` contains three Jupyter notebooks:
-1. `Financial_TS.ipynb` – Creates the synthesizer that will be used to generate the synthetic time series.
-2. `Eval_08.ipynb` – runs tests to evaluate the quality of the synthetic time series produced.
-3. `New_Synthetic_Generation_08.ipynb` – Uses the files created by Financial_TS.ipynb to generate more synthetic time series.
-
-Notice that `experiment_08` contains three Jupyter notebooks:
 
 1.   `Financial_TS.ipynb` – Creates the synthesizer that will be used to
 generate the synthetic time series.
@@ -63,6 +58,7 @@ In addition, it contains the following folders:
 7. `autoencoder` – contains the autoencoder model saved in Tensorflow 2 format.
 
 The src folder contains the files necessary to run the experiments. The directory is shown below.
+
 ![src_dir.png](https://drive.google.com/uc?id=1KjAUkORKK8kpgZpsMYaJHqac-Vjei-xq)
 <figcaption></figcaption>
 
