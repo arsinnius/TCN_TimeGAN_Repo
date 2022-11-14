@@ -130,6 +130,32 @@ This notebook can be used to generate new synthetic data using the models and fi
 
 In reality, after perhaps many rounds of generating, evaluating  and tweaking the code, the user may wish to create thousands (millions) of synthetic time series to be used for training an AI/ML model. This notebook would have to be modified. Luckily, the Jupyter notebook format is flexible. For example, rather than storing samples in the samples folder, they could be written to an `h5` file and every *n*th sample printed to indicate progress.
 <br><br>
+# **Starting a New Experiment**
+
+Suppose a user wants to create a new experiment – `experiment_20`. Creating `experiment_20` would begin by creating a `params_20.py` file in the `src` folder. The parameter file is structured as follows:
+
+1. imports
+2. experiment number
+3. Data Parameters
+4. Training Parameters
+5. Network Parameters
+6. Generic Loss Functions
+7. Optimizers
+8. Pooling Parameters
+
+The Data Parameters section from `params_08.py` and `params_09.py` are shown below.
+
+![params_08_data](https://drive.google.com/uc?id=1CyzxZhdbMcAgFW1SXZoPAKnZEPD1tfMF)
+
+
+![params_09_data](https://drive.google.com/uc?id=1ZmOkmUv2KTQcH7hB3mjk-WzUrYLc1rav)
+
+The difference in the data sections reflects the difference in the data. The stock data was daily data read in from Yahoo using `pandas_data_reader`. The climate data was collected from the [Historical Palmer Drought Indices](https://www.ncei.noaa.gov/access/monitoring/historical-palmers/) and stored in a `.csv` file. 
+
+The next step would be to modify `Financial_TS.ipynb` (say) to accommodate the new data. The Experiment Path section of the notebook will use the parameter `experiment` to automatically create an `experiment_20` folder in the repo and populate it with the required sub-folders.
+
+Altering the training or tweaking the networks can be done by changing the appropriate parameters. If new parameters are required to, for example, tune the TCN, they can be easily added to `params_20.py`.
+<br><br>
 # **Issues**
 
 1. The TCN was tested using default settings. It outperformed on the financial data but didn’t perform well on the climate data. Can the parameters of the TCN be optimized separately for the two types of time series?
