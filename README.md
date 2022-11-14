@@ -161,6 +161,9 @@ Altering the training or tweaking the networks can be done by changing the appro
 1. The TCN was tested using default settings. It outperformed on the financial data but didn’t perform well on the climate data. Can the parameters of the TCN be optimized separately for the two types of time series?
 2. More generally, can a user-guide be written to explain how to optimize TCN parameters based on time series characteristics for *any* time series?
 <br><br>
+# **Author(s)**
+Norbert Pierre – arsinnius@yahoo.com
+<br><br>
 # **License**
 This project is licensed under the MIT License - see [MIT License](https://opensource.org/licenses/MIT) for details 
 <br><br>
