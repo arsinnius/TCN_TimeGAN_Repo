@@ -45,7 +45,7 @@ Notice that `experiment_08` contains three Jupyter notebooks:
 1.   `Financial_TS.ipynb` – Creates the synthesizer that will be used to
 generate the synthetic time series.
 2.   `Eval_08.ipynb` – runs tests to evaluate the quality of the synthetic time series produced
-3. `New_Synthetic_Generation_08.ipynb` – Uses the files created by Financial_TS.ipynb to generate more synthetic time series
+3. `New_Synthetic_Generation_08.ipynb` – Uses the files created by `Financial_TS.ipynb` to generate more synthetic time series
     
 
 In addition, it contains the following folders:
@@ -126,9 +126,9 @@ c. `New_Synthetic_Generation_08.ipynb`
 9. Prepare Data
 10. Plot Sample Series
 
-This notebook can be used to generate new synthetic data using the models and files created by  `Financial_TS.ipynb`. Following the markdown cell “Installs”, is the markdown “Samples to be Generated” followed by a code cell containing two variables which the user must assign values – `n_init` (starting sample number) and `n_plots` (number of samples). Suppose the user assigns the values 11 and 5 respectively. Then the notebook will generate 5 samples (`sample_11` to `sample_15`) and place them in the samples folder. To avoid overwriting samples currently in that folder, the use must make sure that the numbers don’t overlap. For example, one could use 1-100 for one set, 101-200 for another and so on. Clearly, the notebook in its present form is for illustrative purposes.
+This notebook can be used to generate new synthetic data using the models and files created by  `Financial_TS.ipynb`. Following the markdown cell “Installs”, is the markdown “Samples to be Generated” followed by a code cell containing two variables which the user must assign values – `n_init` (starting sample number) and `n_plots` (number of samples). Suppose the user assigns the values 11 and 5 respectively. Then the notebook will generate 5 samples (`sample_11` to `sample_15`) and place them in the samples folder. To avoid overwriting samples currently in that folder, the use must make sure that the numbers don’t overlap. For example, one could use 1-100 for one set, 101-200 for another and so on. 
 
-In reality, after perhaps many rounds of generating, evaluating  and tweaking the code, the user may wish to create thousands (millions) of synthetic time series to be used for training an AI/ML model. This notebook would have to be modified. Luckily, the Jupyter notebook format is flexible. For example, rather than storing samples in the samples folder, they could be written to an `h5` file and every *n*th sample printed to indicate progress.
+Clearly, the notebook in its present form is for illustrative purposes. In reality, after perhaps many rounds of generating, evaluating  and tweaking the code, the user may wish to create thousands (millions) of synthetic time series to be used for training an AI/ML model. This notebook would have to be modified. Luckily, the Jupyter notebook format is flexible. For example, rather than storing samples in the samples folder, they could be written to an `h5` file and every *n*th sample printed to indicate progress.
 <br><br>
 # **Starting a New Experiment**
 
