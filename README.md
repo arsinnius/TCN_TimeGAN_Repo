@@ -4,10 +4,10 @@ Adapted from the excellent paper by Jinsung Yoon, Daniel Jarrett, and Mihaela va
 Neural Information Processing Systems (NeurIPS), 2019.
 
 - Last updated Date: April 24th 2020
-- [Original code](https://bitbucket.org/mvdschaar/mlforhealthlabpub/src/master/alg/timegan/) author: Jinsung Yoon (jsyoon0823@gmail.com)
+- [Original code](https://github.com/jsyoon0823/TimeGAN) author: Jinsung Yoon (jsyoon0823@gmail.com)
 <br><br>
 # **Description**
-The model uses Tensorflow 2. In the original timegan paper, the autoencoder was built using an RNN. This project replaces the RNN with the TCN-AE autoencoder described by Thill et al. (2021) in "Temporal convolutional autoencoder for unsupervised anomaly detection in time series."
+The model uses Tensorflow 2. In the original timegan paper, the autoencoder was built using an RNN. This project replaces the RNN with the TCN-AE autoencoder described by Thill et al. (2021).
 
 The modified model was tested on two different time series - financial and climate. Using the default settings, TCN-AE outperformed the RNN on the financial time series. However it didn't perform very well on the climate data. The belief is that the performance on both series could be vastly improved if the parameters of the TCN-AE were individually optimized for each time series type.
 <br><br>
